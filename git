@@ -1,5 +1,4 @@
 #!/bin/sh
 
-git clone https://github.com/ymsoftware/es-vertx-search.git
 cd es-vertx-search/target
 sudo java -jar search-service-1.0-SNAPSHOT.jar
