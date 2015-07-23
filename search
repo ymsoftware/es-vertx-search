@@ -1,0 +1,17 @@
+#!/bin/sh
+
+gnome-terminal -e /usr/local/shared/elasticsearch/elasticsearch-1.7.0/bin/elasticsearch
+
+sleep 30
+
+mvn clean install
+
+file="target/verticles.json"
+if [ -f "$file" ]
+then
+	rm -f "$file"
+fi
+
+cp -b target/classes/verticles.json target
+cd target
+java -jar search-service-1.0-SNAPSHOT.jar

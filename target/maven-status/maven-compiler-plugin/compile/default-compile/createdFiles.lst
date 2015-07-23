@@ -1,0 +1,10 @@
+org/ap/search/es/ElasticSearchServiceConfig.class
+org/ap/search/vertx/Helpers.class
+org/ap/search/SearchRequest.class
+org/ap/search/SearchService.class
+org/ap/search/es/ElasticSearchService.class
+org/ap/search/vertx/SearchServiceVerticle.class
+org/ap/search/FieldRange.class
+org/ap/search/RangeValue.class
+org/ap/search/Helpers.class
+org/ap/search/vertx/Startup.class

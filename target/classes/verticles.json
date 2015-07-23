@@ -1,0 +1,54 @@
+{
+  "verticles": [
+    {
+      "id": "org.ap.search.vertx.SearchServiceVerticle",
+      "instances": 2,
+      "config": {
+        "port": 9900,
+        "es": {
+          "host": "localhost",
+          "port": 9300,
+          "index": "ym",
+          "type": "doc",
+          "fields_not_use": [
+            "alertcategories^7",
+            "caption.nitf^20",
+            "categories.name^7",
+            "companies.industries.name",
+            "companies.name^30",
+            "companies.symbols.exchange",
+            "companies.symbols.ticker",
+            "dateline^10",
+            "datelinelocation.city^20",
+            "datelinelocation.countryareaname^20",
+            "datelinelocation.countryname^20",
+            "events.name^30",
+            "filings.filingsubjects^7",
+            "filings.slugline^50",
+            "fixture.name",
+            "friendlykey",
+            "headline^50",
+            "itemcontenttype.name",
+            "itemid",
+            "keywordlines^7",
+            "locationline^7",
+            "main.nitf^20",
+            "organizations.name^30",
+            "overlines^7",
+            "persons.associatedevents.name",
+            "persons.name^30",
+            "persons.teams.name",
+            "persons.types",
+            "places.name^30",
+            "recordid",
+            "script.nitf^20",
+            "shotlist.nitf^20",
+            "subjects.name^30",
+            "suppcategories.name",
+            "title^50"
+          ]
+        }
+      }
+    }
+  ]
+}
