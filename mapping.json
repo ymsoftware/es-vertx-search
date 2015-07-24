@@ -11,9 +11,6 @@
           "enabled": true,
           "path": "arrivaldatetime"
         },
-        "_ttl": {
-          "enabled": true
-        },
         "properties": {
           "alertcategories": {
             "type": "string",
