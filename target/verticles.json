@@ -8,7 +8,7 @@
         "es": {
           "host": "localhost",
           "port": 9300,
-          "index": "ym",
+          "index": "appl",
           "type": "doc",
           "fields_not_use": [
             "alertcategories^7",
