@@ -1,0 +1,2168 @@
+{
+  "appl": {
+    "aliases": {},
+    "mappings": {
+      "doc": {
+        "dynamic": "false",
+        "_all": {
+          "store": true
+        },
+        "_timestamp": {
+          "enabled": true,
+          "path": "arrivaldatetime"
+        },
+        "_ttl": {
+          "enabled": true
+        },
+        "properties": {
+          "alertcategories": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": true
+          },
+          "arrivaldatetime": {
+            "type": "date",
+            "format": "dateOptionalTime",
+            "include_in_all": false
+          },
+          "associations": {
+            "properties": {
+              "associationrank": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "itemid": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "representationtype": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "type": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "typerank": {
+                "type": "integer",
+                "include_in_all": false
+              }
+            }
+          },
+          "audiences": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "type": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              }
+            }
+          },
+          "bylines": {
+            "properties": {
+              "by": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": false
+              },
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "parametric": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "title": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              }
+            }
+          },
+          "canonicallink": {
+            "type": "string",
+            "index": "not_analyzed",
+            "include_in_all": false
+          },
+          "caption": {
+            "properties": {
+              "nitf": {
+                "type": "string",
+                "analyzer": "all_text",
+                "include_in_all": true
+              },
+              "words": {
+                "type": "integer",
+                "include_in_all": false
+              }
+            }
+          },
+          "captionwriter": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "title": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              }
+            }
+          },
+          "categories": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              }
+            }
+          },
+          "changeevent": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "companies": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "creator": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "industries": {
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "name": {
+                    "type": "string",
+                    "analyzer": "tokenlower",
+                    "include_in_all": true
+                  }
+                }
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": true
+              },
+              "rels": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "scheme": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              },
+              "symbols": {
+                "properties": {
+                  "exchange": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "instrument": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "ticker": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": true
+                  }
+                }
+              }
+            }
+          },
+          "compositeid": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "compositiontype": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "contributor": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "copyrightdate": {
+            "type": "integer",
+            "include_in_all": false
+          },
+          "copyrightholder": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "copyrightnotice": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "creator": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "creditline": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "creditlineid": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "dateline": {
+            "type": "string",
+            "analyzer": "asciilower",
+            "include_in_all": true
+          },
+          "datelinelocation": {
+            "properties": {
+              "city": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": true
+              },
+              "countryareacode": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "countryareaname": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": true
+              },
+              "countrycode": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "countryname": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": true
+              },
+              "geometry_geojson": {
+                "properties": {
+                  "coordinates": {
+                    "type": "float",
+                    "include_in_all": false
+                  },
+                  "type": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  }
+                }
+              }
+            }
+          },
+          "descriptions": {
+            "type": "string",
+            "analyzer": "all_text",
+            "include_in_all": false
+          },
+          "distributionchannels": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "editor": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": false
+              },
+              "title": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              }
+            }
+          },
+          "editorialid": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "editorialpriority": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "editorialrole": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "editorialtypes": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "embargoed": {
+            "type": "date",
+            "format": "dateOptionalTime",
+            "include_in_all": false
+          },
+          "events": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": true
+              },
+              "type": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              }
+            }
+          },
+          "filings": {
+            "type": "nested",
+            "include_in_parent": true,
+            "properties": {
+              "breakingnews": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "cycle": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "distributionscope": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "feedline": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "filingarrivaldatetime": {
+                "type": "date",
+                "format": "dateOptionalTime",
+                "include_in_all": false
+              },
+              "filingcategory": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "filingcountries": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": false
+              },
+              "filingid": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "filingonlinecode": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              },
+              "filingregions": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "filingsource": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "filingstyle": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "filingsubjects": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": true
+              },
+              "filingtopics": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "foreignkeys": {
+                "properties": {
+                  "aparchiveitemid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "aparchiverecordid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "aparchivestorynumber": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "apmediaacquisitionrenamefilename": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "apmediaacquisitionsettingsid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "apmediaacquisitionsourcefilename": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "apmediaacquisitionsystemdescription": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "apmediaacquisitionthumbnailpath": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "aponlineitemid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "aponlinerecordid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "aponlinestorynumber": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "bwentryid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "bwmanagementid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "deskaccessionnumber": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "deskfmts": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "deskintl": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "deskother": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "deskus": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "digvieworiginalfilename": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "digviewunvoicedlinkitemid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "digviewunvoicednatsoundlinkitemid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "epixpreviouspublicationrecord": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "epixpublicationitem": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "epixpublicationrecord": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "graphicsbankid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "graphicsbankmatteid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "kyodoentryid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "kyodomanagementid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "memberentryid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "membermanagementid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "mosbinarymosid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "mosmosid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "mosncsid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "mosobjid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "mosroid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "mosstoryid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "mosstorynumber": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "pamanagementid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "storyid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "tass-itarmanagementid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "thecanadianpressmanagementid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "ukpaentryid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  },
+                  "ukpamanagementid": {
+                    "type": "string",
+                    "analyzer": "lkeyword"
+                  }
+                }
+              },
+              "format": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "fields": {
+                  "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  }
+                },
+                "include_in_all": false
+              },
+              "importfolder": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              },
+              "importwarnings": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              },
+              "junkline": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "libraryrequestid": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "libraryrequestlogin": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              },
+              "librarytwincheck": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "originalmediaid": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "priorityline": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "products": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "routings": {
+                "properties": {
+                  "expandedgroupsidadds": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "expandedgroupsidouts": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "expandedsidadds": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "expandedsidouts": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "groupsidadds": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "groupsidouts": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "passcodeadds": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "passcodeouts": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "prologadds": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "prologouts": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "sidadds": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "sidouts": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  }
+                }
+              },
+              "selector": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "serviceleveldesignator": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "slugline": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": true
+              },
+              "specialfieldattn": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "transmissioncontent": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "transmissionfilename": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              },
+              "transmissionreference": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              }
+            }
+          },
+          "filingtype": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "firstcreated": {
+            "type": "date",
+            "format": "dateOptionalTime",
+            "include_in_all": false
+          },
+          "fixture": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": true
+              }
+            }
+          },
+          "friendlykey": {
+            "type": "string",
+            "index": "not_analyzed",
+            "include_in_all": true
+          },
+          "function": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "generators": {
+            "properties": {
+              "name": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "version": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              }
+            }
+          },
+          "headline": {
+            "type": "string",
+            "analyzer": "all_text",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            },
+            "include_in_all": true
+          },
+          "inpackages": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "itemcontenttype": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "creator": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": true
+              }
+            }
+          },
+          "itemenddatetime": {
+            "type": "date",
+            "format": "dateOptionalTime",
+            "include_in_all": false
+          },
+          "itemexpiredatetime": {
+            "type": "date",
+            "format": "dateOptionalTime",
+            "include_in_all": false
+          },
+          "itemid": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": true
+          },
+          "itemkey": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "itemstartdatetime": {
+            "type": "date",
+            "format": "dateOptionalTime",
+            "include_in_all": false
+          },
+          "itemstartdatetimeactual": {
+            "type": "date",
+            "format": "dateOptionalTime",
+            "include_in_all": false
+          },
+          "keywordlines": {
+            "type": "string",
+            "analyzer": "all_text",
+            "include_in_all": true
+          },
+          "language": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "lastmodifieddatetime": {
+            "type": "date",
+            "format": "dateOptionalTime",
+            "include_in_all": false
+          },
+          "locationline": {
+            "type": "string",
+            "analyzer": "asciilower",
+            "include_in_all": true
+          },
+          "main": {
+            "properties": {
+              "nitf": {
+                "type": "string",
+                "analyzer": "all_text",
+                "include_in_all": true
+              },
+              "words": {
+                "type": "integer",
+                "include_in_all": false
+              }
+            }
+          },
+          "newspowerdrivetimealaska": {
+            "type": "boolean"
+          },
+          "newspowerdrivetimearizona": {
+            "type": "boolean"
+          },
+          "newspowerdrivetimeatlantic": {
+            "type": "boolean"
+          },
+          "newspowerdrivetimecentral": {
+            "type": "boolean"
+          },
+          "newspowerdrivetimeeastern": {
+            "type": "boolean"
+          },
+          "newspowerdrivetimehawaii": {
+            "type": "boolean"
+          },
+          "newspowerdrivetimemountain": {
+            "type": "boolean"
+          },
+          "newspowerdrivetimepacific": {
+            "type": "boolean"
+          },
+          "newspowermorningalaska": {
+            "type": "boolean"
+          },
+          "newspowermorningarizona": {
+            "type": "boolean"
+          },
+          "newspowermorningatlantic": {
+            "type": "boolean"
+          },
+          "newspowermorningcentral": {
+            "type": "boolean"
+          },
+          "newspowermorningeastern": {
+            "type": "boolean"
+          },
+          "newspowermorninghawaii": {
+            "type": "boolean"
+          },
+          "newspowermorningmountain": {
+            "type": "boolean"
+          },
+          "newspowermorningpacific": {
+            "type": "boolean"
+          },
+          "organizations": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "creator": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": true
+              },
+              "parentids": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "rels": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "scheme": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              },
+              "topparent": {
+                "type": "boolean"
+              }
+            }
+          },
+          "outcue": {
+            "type": "string",
+            "analyzer": "all_text",
+            "include_in_all": false
+          },
+          "outinginstructions": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "overlines": {
+            "type": "string",
+            "analyzer": "asciilower",
+            "include_in_all": true
+          },
+          "parts": {
+            "properties": {
+              "arrivedinfilingid": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "aspectratio": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "averagebitrate": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "backgroundcolor": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "binarypath": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "colorspace": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "digest": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "encoding": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "fileextension": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "format": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "framerate": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "height": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "heightwidthratio": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "href": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "intimecode": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "intimeframevalue": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "languagedescription": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "logicalaspectratio": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "manualintimecode": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "mimetype": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "originalfilename": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "originalmediaid": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "phototype": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "physicaltype": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "presentationframe": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "presentationframelocation": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "presentationsystem": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "producedaspectratio": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "rel": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "resolution": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "resolutionunits": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "samplerate": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "scene": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "sceneid": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "sizeinbytes": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "tapenumber": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "title": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "totalduration": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "type": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "videocoder": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "width": {
+                "type": "integer",
+                "include_in_all": false
+              }
+            }
+          },
+          "persons": {
+            "type": "nested",
+            "include_in_parent": true,
+            "properties": {
+              "associatedevents": {
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "name": {
+                    "type": "string",
+                    "analyzer": "asciilower",
+                    "include_in_all": true
+                  }
+                }
+              },
+              "associatedstates": {
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "name": {
+                    "type": "string",
+                    "analyzer": "asciilower",
+                    "include_in_all": false
+                  }
+                }
+              },
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "creator": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "extids": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": true
+              },
+              "rels": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "scheme": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              },
+              "teams": {
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "name": {
+                    "type": "string",
+                    "analyzer": "tokenlower",
+                    "include_in_all": true
+                  }
+                }
+              },
+              "types": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              }
+            }
+          },
+          "photographer": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": false
+              },
+              "title": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              }
+            }
+          },
+          "places": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "creator": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "geometry_geojson": {
+                "properties": {
+                  "coordinates": {
+                    "type": "float",
+                    "include_in_all": false
+                  },
+                  "type": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  }
+                }
+              },
+              "locationtype": {
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "name": {
+                    "type": "string",
+                    "analyzer": "tokenlower",
+                    "include_in_all": false
+                  }
+                }
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": true
+              },
+              "parentids": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "rels": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "scheme": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              },
+              "topparent": {
+                "type": "boolean"
+              }
+            }
+          },
+          "priority": {
+            "type": "integer",
+            "include_in_all": false
+          },
+          "producer": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": false
+              }
+            }
+          },
+          "productsources": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "provider": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "subtype": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "type": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              }
+            }
+          },
+          "publishableeditornotes": {
+            "properties": {
+              "nitf": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "words": {
+                "type": "integer",
+                "include_in_all": false
+              }
+            }
+          },
+          "pubstatus": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "ratings": {
+            "properties": {
+              "creator": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "raters": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "ratertype": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "rating": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "scalemax": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "scalemin": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "scaleunit": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              }
+            }
+          },
+          "recordid": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": true
+          },
+          "recordsequencenumber": {
+            "type": "integer",
+            "include_in_all": false
+          },
+          "recordtype": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "releasedatetime": {
+            "type": "date",
+            "format": "dateOptionalTime",
+            "include_in_all": false
+          },
+          "renditions": {
+            "properties": {
+              "arrivedinfilingid": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "aspectratio": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "averagebitrate": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "backgroundcolor": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "binarypath": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "colorspace": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "digest": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "encoding": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "fileextension": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "format": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "fields": {
+                  "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  }
+                },
+                "include_in_all": false
+              },
+              "framerate": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "height": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "heightwidthratio": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "href": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "intimecode": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "intimeframevalue": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "languagedescription": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "logicalaspectratio": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "manualintimecode": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "mimetype": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "originalfilename": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "originalmediaid": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "phototype": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "physicaltype": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "presentationframe": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "presentationframelocation": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "presentationsystem": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "producedaspectratio": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "rel": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "resolution": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "resolutionunits": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "role": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "samplerate": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "scene": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "sceneid": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "sizeinbytes": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "tapenumber": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "title": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "totalduration": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "type": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "videocoder": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "width": {
+                "type": "integer",
+                "include_in_all": false
+              }
+            }
+          },
+          "representationtype": {
+            "type": "string",
+            "index": "not_analyzed",
+            "include_in_all": false
+          },
+          "representationversion": {
+            "type": "string",
+            "index": "not_analyzed",
+            "include_in_all": false
+          },
+          "rightsline": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "script": {
+            "properties": {
+              "nitf": {
+                "type": "string",
+                "analyzer": "all_text",
+                "include_in_all": true
+              },
+              "words": {
+                "type": "integer",
+                "include_in_all": false
+              }
+            }
+          },
+          "searchdatetime": {
+            "type": "date",
+            "format": "dateOptionalTime",
+            "include_in_all": false
+          },
+          "seriesline": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "services": {
+            "properties": {
+              "apsales": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "apservice": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              }
+            }
+          },
+          "shotlist": {
+            "properties": {
+              "nitf": {
+                "type": "string",
+                "analyzer": "all_text",
+                "include_in_all": true
+              },
+              "words": {
+                "type": "integer",
+                "include_in_all": false
+              }
+            }
+          },
+          "shots": {
+            "properties": {
+              "end": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "height": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "href": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "seq": {
+                "type": "integer",
+                "include_in_all": false
+              },
+              "start": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "timeunit": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "width": {
+                "type": "integer",
+                "include_in_all": false
+              }
+            }
+          },
+          "signals": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "sourcematerials": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "permissiongranted": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "type": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "url": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              }
+            }
+          },
+          "sources": {
+            "properties": {
+              "city": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": false
+              },
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "country": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": false
+              },
+              "countryarea": {
+                "type": "string",
+                "analyzer": "asciilower",
+                "include_in_all": false
+              },
+              "county": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "fields": {
+                  "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  }
+                },
+                "include_in_all": false
+              },
+              "subtype": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "type": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "fields": {
+                  "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  }
+                },
+                "include_in_all": false
+              },
+              "url": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              }
+            }
+          },
+          "specialinstructions": {
+            "type": "string",
+            "analyzer": "tokenlower",
+            "include_in_all": false
+          },
+          "subjects": {
+            "type": "nested",
+            "include_in_parent": true,
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "creator": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": true
+              },
+              "parentids": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "rels": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "scheme": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              },
+              "topparent": {
+                "type": "boolean"
+              }
+            }
+          },
+          "suppcategories": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": true
+              }
+            }
+          },
+          "thirdpartymeta": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "creator": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "name": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "vocabulary": {
+                "type": "string",
+                "analyzer": "lkeyword",
+                "include_in_all": false
+              },
+              "vocabularyowner": {
+                "type": "string",
+                "index": "not_analyzed",
+                "include_in_all": false
+              }
+            }
+          },
+          "title": {
+            "type": "string",
+            "analyzer": "all_text",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            },
+            "include_in_all": true
+          },
+          "transmissionsources": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "type": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "usagerights": {
+            "properties": {
+              "enddate": {
+                "type": "date",
+                "format": "dateOptionalTime",
+                "include_in_all": false
+              },
+              "geography": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "groups": {
+                "type": "nested",
+                "include_in_parent": true,
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "analyzer": "lkeyword",
+                    "include_in_all": false
+                  },
+                  "name": {
+                    "type": "string",
+                    "analyzer": "tokenlower",
+                    "include_in_all": false
+                  },
+                  "type": {
+                    "type": "string",
+                    "analyzer": "tokenlower",
+                    "include_in_all": false
+                  }
+                }
+              },
+              "limitations": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "rightsholder": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              },
+              "startdate": {
+                "type": "date",
+                "format": "dateOptionalTime",
+                "include_in_all": false
+              },
+              "usagetype": {
+                "type": "string",
+                "analyzer": "tokenlower",
+                "include_in_all": false
+              }
+            }
+          },
+          "workflowstatus": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          },
+          "workgroup": {
+            "type": "string",
+            "analyzer": "lkeyword",
+            "include_in_all": false
+          }
+        }
+      }
+    },
+    "settings": {
+      "index": {
+        "number_of_shards": "4",
+        "auto_expand_replicas": "false",
+        "analysis": {
+          "analyzer": {
+            "tokenlower": {
+              "filter": [
+                "lowercase"
+              ],
+              "tokenizer": "standard"
+            },
+            "lkeyword": {
+              "filter": [
+                "lowercase"
+              ],
+              "tokenizer": "keyword"
+            },
+            "all_text": {
+              "filter": [
+                "standard",
+                "lowercase",
+                "asciifolding",
+                "kstem"
+              ],
+              "char_filter": "html_strip",
+              "tokenizer": "standard"
+            },
+            "asciilower": {
+              "filter": [
+                "lowercase",
+                "asciifolding"
+              ],
+              "tokenizer": "standard"
+            }
+          }
+        },
+        "number_of_replicas": "0"
+      }
+    },
+    "warmers": {}
+  }
+}
